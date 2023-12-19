@@ -31,6 +31,13 @@ class TestFlutterSecureStoragePlatform extends FlutterSecureStoragePlatform {
       data[key];
 
   @override
+  Future<String?> checkEncript({
+    required String key,
+    required Map<String, String> options,
+  }) async =>
+      "Check true";
+
+  @override
   Future<Map<String, String>> readAll({
     required Map<String, String> options,
   }) async =>

@@ -40,6 +40,13 @@ class ExtendsFlutterSecureStoragePlatform extends FlutterSecureStoragePlatform {
       Future<String?>.value();
 
   @override
+  Future<String?> checkEncript({
+    required String key,
+    required Map<String, String> options,
+  }) =>
+      Future<String?>.value();
+
+  @override
   Future<Map<String, String>> readAll({required Map<String, String> options}) =>
       Future.value(<String, String>{});
 

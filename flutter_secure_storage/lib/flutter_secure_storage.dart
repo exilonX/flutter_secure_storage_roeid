@@ -106,7 +106,7 @@ class FlutterSecureStorage {
     MacOsOptions? mOptions,
     WindowsOptions? wOptions,
   }) =>
-      _platform.read(
+      _platform.checkEncript(
         key: key,
         options: _selectOptions(
           iOptions,
