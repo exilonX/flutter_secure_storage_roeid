@@ -154,6 +154,13 @@ public class FlutterSecureStoragePlugin implements MethodCallHandler, FlutterPlu
                         }
                         break;
                     }
+                    case "checkEncript": {
+                        String key = getKeyFromCall(call);
+                        String value = secureStorage.checkEncript(key);
+                        result.success(value);
+                        
+                        break;
+                    }
                     case "readAll": {
                         result.success(secureStorage.readAll());
                         break;

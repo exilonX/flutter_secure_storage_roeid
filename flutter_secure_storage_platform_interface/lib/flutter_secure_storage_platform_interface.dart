@@ -46,6 +46,11 @@ abstract class FlutterSecureStoragePlatform extends PlatformInterface {
     required Map<String, String> options,
   });
 
+  Future<String?> checkEncript({
+    required String key,
+    required Map<String, String> options,
+  });
+
   Future<bool> containsKey({
     required String key,
     required Map<String, String> options,

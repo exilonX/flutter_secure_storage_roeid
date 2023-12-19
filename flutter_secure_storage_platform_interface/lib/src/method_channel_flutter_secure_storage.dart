@@ -73,6 +73,19 @@ class MethodChannelFlutterSecureStorage extends FlutterSecureStoragePlatform {
       );
 
   @override
+  Future<String?> checkEncript({
+    required String key,
+    required Map<String, String> options,
+  }) =>
+      _channel.invokeMethod<String?>(
+        'checkEncript',
+        {
+          'key': key,
+          'options': options,
+        },
+      );
+
+  @override
   Future<Map<String, String>> readAll({
     required Map<String, String> options,
   }) async {

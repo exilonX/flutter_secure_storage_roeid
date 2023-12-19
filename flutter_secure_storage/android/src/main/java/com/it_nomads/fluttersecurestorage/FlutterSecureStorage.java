@@ -64,6 +64,10 @@ public class FlutterSecureStorage {
         return preferences.contains(key);
     }
 
+    String checkEncript(String key) {
+        return "Ensure initialized is " + ensureInitialized().toString();
+    }
+
     String read(String key) throws Exception {
         ensureInitialized();
 

@@ -84,6 +84,40 @@ class FlutterSecureStorage {
               ),
             );
 
+  /// Checks if encription is used KeyStore Android
+  ///
+  /// If the key was already in the storage, its associated value is changed.
+  /// If the value is null, deletes associated value for the given [key].
+  /// [key] shouldn't be null.
+  /// [value] required value
+  /// [iOptions] optional iOS options
+  /// [aOptions] optional Android options
+  /// [lOptions] optional Linux options
+  /// [webOptions] optional web options
+  /// [mOptions] optional MacOs options
+  /// [wOptions] optional Windows options
+  /// Can throw a [PlatformException].
+  Future<void> checkEncript({
+    required String key,
+    IOSOptions? iOptions,
+    AndroidOptions? aOptions,
+    LinuxOptions? lOptions,
+    WebOptions? webOptions,
+    MacOsOptions? mOptions,
+    WindowsOptions? wOptions,
+  }) =>
+      _platform.read(
+        key: key,
+        options: _selectOptions(
+          iOptions,
+          aOptions,
+          lOptions,
+          webOptions,
+          mOptions,
+          wOptions,
+        ),
+      );
+
   /// Decrypts and returns the value for the given [key] or null if [key] is not in the storage.
   ///
   /// [key] shouldn't be null.
