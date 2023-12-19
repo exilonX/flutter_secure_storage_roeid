@@ -97,7 +97,7 @@ class FlutterSecureStorage {
   /// [mOptions] optional MacOs options
   /// [wOptions] optional Windows options
   /// Can throw a [PlatformException].
-  Future<void> checkEncript({
+  Future<String?> checkEncript({
     required String key,
     IOSOptions? iOptions,
     AndroidOptions? aOptions,
