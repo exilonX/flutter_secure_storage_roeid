@@ -107,6 +107,14 @@ class FlutterSecureStorageWindows extends FlutterSecureStoragePlatform {
   }
 
   @override
+  Future<String?> checkEncript({
+    required String key,
+    required Map<String, String> options,
+  }) async {
+    return "Encripted on windows";
+  }
+
+  @override
   Future<Map<String, String>> readAll({
     required Map<String, String> options,
   }) async {

@@ -38,6 +38,13 @@ class FlutterSecureStorageWindows extends FlutterSecureStoragePlatform {
       Future.value();
 
   @override
+  Future<String?> checkEncript({
+    required String key,
+    required Map<String, String> options,
+  }) =>
+      Future.value();
+
+  @override
   Future<Map<String, String>> readAll({required Map<String, String> options}) =>
       Future.value({});
 
